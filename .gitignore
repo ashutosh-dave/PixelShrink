@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Flask/Django specific
+instance/
+.webassets-cache
+
+# PyInstaller
+# Usually contains the compiled Python code and executables
+dist/
+build/
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache
+
+# Static asset caches
+*.log
+*.pot
+*.pyc
+
+# Environment variables (e.g. Flask's .env file)
+.env
+*.env
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# System files (macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# IDE/Editor-specific files (e.g. VSCode, PyCharm)
+.vscode/
+.idea/
+
+# Generated Files
+*.zip
+*.tar.gz
+*.tar
