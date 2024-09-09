@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelShrink</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="file"], input[type="number"] {
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+        }
+        .settings {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .settings label {
+            display: inline-block;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PixelShrink</h1>
+    <p>Upload one or multiple images to convert and compress.</p>
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".webp,.png,.jpg,.jpeg" multiple>
+        <div class="settings">
+            <label for="target_size">Target Size (KB):</label>
+            <input type="number" id="target_size" name="target_size" value="250" min="1" max="5000"><br>
+            <label for="quality">Initial Quality:</label>
+            <input type="number" id="quality" name="quality" value="95" min="1" max="100"><br>
+            <label for="min_quality">Minimum Quality:</label>
+            <input type="number" id="min_quality" name="min_quality" value="10" min="1" max="100">
+        </div>
+        <br>
+        <input type="submit" value="PixelShrink It!">
+    </form>
+</body>
+</html>
