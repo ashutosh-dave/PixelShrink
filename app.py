@@ -63,7 +63,7 @@ def upload_file():
                 return send_file(
                     output,
                     as_attachment=True,
-                    download_name=f"pixelshrink_{filename.rsplit('.', 1)[0]}.jpg",
+                    download_name=f"{filename.rsplit('.', 1)[0]}.jpg",
                     mimetype='image/jpeg'
                 )
         else:
