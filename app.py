@@ -74,7 +74,7 @@ def upload_file():
                     if file and allowed_file(file.filename):
                         filename = secure_filename(file.filename)
                         output = pixel_shrink(file, target_size, quality, min_quality)
-                        zf.writestr(f"pixelshrink_{filename.rsplit('.', 1)[0]}.jpg", output.getvalue())
+                        zf.writestr(f"{filename.rsplit('.', 1)[0]}.jpg", output.getvalue())
                         
                         # Clear the file after processing
                         file.seek(0)
